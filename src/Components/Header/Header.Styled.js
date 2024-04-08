@@ -8,12 +8,12 @@ export const HeaderWrapper = styled.header `
        height: 10vh;
        padding: 2rem;
 
-       /* .Logo{
+       .Logo{
         height:4rem;
         width:4rem;
         fill: ${(props) => props.theme.colors.text};
         cursor:pointer;
-        } */
+        }
       `;
 
 export const LightModeIcon = styled(MdOutlineLightMode) `

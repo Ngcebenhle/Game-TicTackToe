@@ -16,7 +16,7 @@ const ModalTemplate = () => {
       document.getElementById("modal-root")
     );
   }
-  return null;
+ 
 };
 
 export default ModalTemplate;

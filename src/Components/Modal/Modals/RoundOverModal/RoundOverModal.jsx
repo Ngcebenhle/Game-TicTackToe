@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 // Styles
 import { Tittle, SubTittle } from "../../../../Styles/General.Styles";
-import { ModalBody, ModalHeader, Modalfooter } from "../../Modal.Styles";
+import { ModalBody, ModalHeader, ModalFooter } from "../../Modal.Styles";
 import { ButtonWrapper } from "../../../Button/Button.Styles";
 
 // Context
@@ -37,7 +37,7 @@ const RoundOverModal = () => {
         </SubTittle>
       </ModalBody>
 
-      <Modalfooter>
+      <ModalFooter>
         <ButtonWrapper
           color="#f9c011"
           onClick={() => {
@@ -50,7 +50,7 @@ const RoundOverModal = () => {
         </ButtonWrapper>
 
         <ButtonWrapper
-          color="#8437f("
+          color="#8437f9"
           onClick={() => {
             clickedSF();
             navigate("/");
@@ -61,7 +61,7 @@ const RoundOverModal = () => {
         >
           Restart
         </ButtonWrapper>
-      </Modalfooter>
+      </ModalFooter>
     </>
   );
 };

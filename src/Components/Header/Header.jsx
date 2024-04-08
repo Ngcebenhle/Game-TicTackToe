@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 // SVG
-import {ReactComponent as Logo} from '../../Assets/tac_tic_toe_icon.svg'
+import { ReactComponent as Logo } from "../../Assets/tac_tic_toe_icon.svg";
 
 //Styled
 import { HeaderWrapper, LightModeIcon, DarkModeIcon } from "./Header.Styled";
@@ -18,22 +18,22 @@ const Header = () => {
   const { hoverSF, clickedSF } = useContext(SoundEffectsContext);
   return (
     <HeaderWrapper>
-      {/* <Logo className ="Logo" onClick={() => {
-          clickedSF();
+      <Logo className ="Logo" onClick={() => {
+          // clickedSF();
           navigate("/");
-      }}/> */}
-      
-      <h1
+      }}/>
+
+      {/* <h1
         onClick={() => {
           // clickedSF();
           navigate("/");
         }}
       >
         Logo
-      </h1>
+      </h1> */}
 
       <span
-      className="Light_and_Dark_Toggler_icons"
+        className="Light_and_Dark_Toggler_icons"
         onClick={() => {
           clickedSF();
           toggleTheme();

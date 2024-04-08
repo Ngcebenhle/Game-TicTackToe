@@ -30,12 +30,14 @@ const GameCell = ({ cellItem, index, isWinningCell }) => {
       roundComplete(result);
       if (result !== "Draw") {
         // winnerSound();
+        // setTimeout(() => {
+        //   handleModal(<RoundOverModal />);
+        // }, 2000);
       }
-      // setTimeout(() => {
-      //   handleModal(<RoundOverModal />);
-      // }, 2000);
+      setTimeout(() => {
+        handleModal(<RoundOverModal />);
+      }, 2000);
     }
-
   };
 
   // if (cellItem === "X") {
@@ -55,7 +57,6 @@ const GameCell = ({ cellItem, index, isWinningCell }) => {
     <CellStyles
       isWinningCell={isWinningCell ?? false}
       onClick={() => {
-       
         // clickedSF();
         updatedBoard(index);
         cellClickHandler();

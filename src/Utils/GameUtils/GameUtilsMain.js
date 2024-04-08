@@ -7,8 +7,6 @@ const checkForSequence = (option1, option2, option3) => {
 };
 
 export const CheckForWinner = (board) => {
-
-// Fix up the indexes!!!!!!!!!!!!!!!!
   for (let i = 0; i < 9; i += 3) {
     if (checkForSequence(board[i], board[i + 1], board[i + 2])) {
       return [i, i + 1, i + 2];
@@ -40,6 +38,7 @@ export const CheckForWinner = (board) => {
   }
 
   if (!board.includes(null)) {
+    // try to make the board red 
     return "Draw";
   }
 

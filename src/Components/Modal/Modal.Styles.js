@@ -39,7 +39,7 @@ export const ModalBody = styled.div`
   margin: 1rem;
 `;
 
-export const Modalfooter = styled.div`
+export const ModalFooter = styled.div`
   display: flex;
   justify-content: center;
 `;

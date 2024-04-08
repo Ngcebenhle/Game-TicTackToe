@@ -13,13 +13,15 @@ export const Container = styled.div`
 `;
 
 export const Tittle = styled.h1`
-  color: ${(props) => props.theme.colors.secondary};
+  color: ${(props) =>
+    props.primary ? props.theme.colors.primary : props.theme.colors.text};
   font-size: 3rem;
   font-family: "Pacifico", cursive;
   background-color: transparent;
 `;
 export const SubTittle = styled.h1`
-  color: ${(props) => props.theme.colors.secondary};
+  color: ${(props) =>
+    props.primary ? props.theme.colors.primary : props.theme.colors.text};
   font-size: 24px;
   font-family: Roboto;
   background-color: transparent;

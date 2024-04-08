@@ -6,10 +6,12 @@ import ModalTemplate from "../Components/Modal/ModalTemplate";
 export const ModalContext = createContext({});
 
 export function ModalContextProvider({ children }) {
-  const { modal, modalContent, handleModal } = useModal();
+  const { modal, modalContent, setModal, handleModal } = useModal();
 
   return (
-    <ModalContext.Provider value={{ modal, modalContent, handleModal }}>
+    <ModalContext.Provider
+      value={{ modal, modalContent, setModal, handleModal }}
+    >
       <ModalTemplate />
       {children}
     </ModalContext.Provider>
