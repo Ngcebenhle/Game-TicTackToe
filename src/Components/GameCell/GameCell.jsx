@@ -22,17 +22,17 @@ const GameCell = ({ cellItem, index, isWinningCell }) => {
     useContext(SoundEffectsContext);
 
   const cellClickHandler = () => {
-    // clickedSF();
+     clickedSF();
     updatedBoard(index);
     const result = CheckForWinner(game.board);
 
     if (result) {
       roundComplete(result);
       if (result !== "Draw") {
-        // winnerSound();
-        // setTimeout(() => {
-        //   handleModal(<RoundOverModal />);
-        // }, 2000);
+         winnerSound();
+         setTimeout(() => {
+           handleModal(<RoundOverModal />);
+         }, 2000);
       }
       setTimeout(() => {
         handleModal(<RoundOverModal />);
@@ -57,7 +57,7 @@ const GameCell = ({ cellItem, index, isWinningCell }) => {
     <CellStyles
       isWinningCell={isWinningCell ?? false}
       onClick={() => {
-        // clickedSF();
+         clickedSF();
         updatedBoard(index);
         cellClickHandler();
       }}

@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <Logo className ="Logo" onClick={() => {
-          // clickedSF();
+          clickedSF();
           navigate("/");
       }}/>
 

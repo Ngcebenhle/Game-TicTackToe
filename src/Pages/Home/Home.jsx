@@ -15,16 +15,13 @@ const Home = () => {
   const { hoverSF, clickedSF } = useContext(SoundEffectsContext);
   return (
     <Container>
-      <Tittle>Home</Tittle>
+      <Tittle>Tic Tack Toe</Tittle>
       <SubTittle>Play with your friends, higher score wins!</SubTittle>
       <Button
         onClick={() => {
           clickedSF();
           navigate("/game-on");
         }}
-        onMouseEnter={() => {}
-          // hoverSF()
-        }
       >
         Play Now
       </Button>

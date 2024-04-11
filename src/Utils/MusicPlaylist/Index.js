@@ -1,6 +1,5 @@
-import { Playlist } from "./Playlist";
 
-export const randomizeIndex = (playlist) => 
+export const randomizeIndex = (Playlist) => 
 {
-    Math.floor(Math.random() * playlist.length)
+    Math.floor(Math.random() * Playlist.length)
 }

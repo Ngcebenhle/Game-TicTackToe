@@ -18,7 +18,7 @@ const MusicPlayer = () => {
     if (isPlaying) {
       const promise = playerRef.current?.play();
       setPlayPromise(promise);
-      // playerRef.current.play();
+      playerRef.current.play();
       if (playerRef.current?.volume) {
         playerRef.current.volume = 0.1;
       }
@@ -26,6 +26,8 @@ const MusicPlayer = () => {
     }
     playerRef.current.pause();
   }, [isPlaying, currentSong]);
+
+
 
   const shuffleHandler = async () => {
     await playPromise.then(() => {
@@ -54,13 +56,15 @@ const MusicPlayer = () => {
         />
       )}
 
-      <button>Stop</button>
+      {/* <button>Stop</button> */}
 
-      <NextSongIcon onClick={shuffleHandler} />
+      <NextSongIcon 
+      // onClick={shuffleHandler} 
+      />
 
-      <audio ref={playerRef} src={Playlist[currentSong]}></audio>
+      <audio ref={playerRef} src="https://ss-edge.joeycast.com/lofi.mp3"></audio>
     </MusicPlayerWrapper>
   );
 };
-
+ 
 export default MusicPlayer;
